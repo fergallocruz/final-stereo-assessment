@@ -184,7 +184,7 @@ int stereo_match()
         img2 = temp2;
     }
 
-        if (scale != 1.f)
+    if (scale != 1.f)
     {
         Mat temp1, temp2;
         int method = scale < 1 ? INTER_AREA : INTER_CUBIC;
@@ -235,7 +235,7 @@ int stereo_match()
         fs["R"] >> R;
         fs["T"] >> T;
 
-        stereoRectify( M1, D1, M2, D2, img_size, R, T, R1, R2, P1, P2, Q, CALIB_ZERO_DISPARITY, 0, img_size );
+        stereoRectify(M1, D1, M2, D2, img_size, R, T, R1, R2, P1, P2, Q, CALIB_ZERO_DISPARITY, 0, img_size);
 
         Mat map11, map12, map21, map22;
         initUndistortRectifyMap(M1, D1, R1, P1, img_size, CV_16SC2, map11, map12);
@@ -251,55 +251,61 @@ int stereo_match()
     Mat disp, disp8;
     while (true)
     {
-    numberOfDisparities = numberOfDisparities > 0 ? numberOfDisparities : ((img_size.width/8) + 15) & -16;
+        numberOfDisparities = numberOfDisparities > 0 ? numberOfDisparities : ((img_size.width / 8) + 15) & -16;
 
-    bm->setROI1(roi1);
-    bm->setROI2(roi2);
-    bm->setPreFilterCap(31);
-    bm->setBlockSize(SADWindowSize > 0 ? SADWindowSize : 9);
-    bm->setMinDisparity(0);
-    bm->setNumDisparities(numberOfDisparities);
-    bm->setTextureThreshold(10);
-    bm->setUniquenessRatio(15);
-    bm->setSpeckleWindowSize(100);
-    bm->setSpeckleRange(32);
-    bm->setDisp12MaxDiff(1);
+        bm->setROI1(roi1);
+        bm->setROI2(roi2);
+        bm->setPreFilterCap(31);
+        bm->setBlockSize(SADWindowSize > 0 ? SADWindowSize : 9);
+        bm->setMinDisparity(0);
+        bm->setNumDisparities(numberOfDisparities);
+        bm->setTextureThreshold(10);
+        bm->setUniquenessRatio(15);
+        bm->setSpeckleWindowSize(100);
+        bm->setSpeckleRange(32);
+        bm->setDisp12MaxDiff(1);
 
-    sgbm->setPreFilterCap(63);
-    int sgbmWinSize = SADWindowSize > 0 ? SADWindowSize : 3;
-    sgbm->setBlockSize(sgbmWinSize);
+        sgbm->setPreFilterCap(63);
+        int sgbmWinSize = SADWindowSize > 0 ? SADWindowSize : 3;
+        sgbm->setBlockSize(sgbmWinSize);
 
-    int cn = img1.channels();
+        int cn = img1.channels();
 
-    sgbm->setP1(8*cn*sgbmWinSize*sgbmWinSize);
-    sgbm->setP2(32*cn*sgbmWinSize*sgbmWinSize);
-    sgbm->setMinDisparity(0);
-    sgbm->setNumDisparities(numberOfDisparities);
-    sgbm->setUniquenessRatio(10);
-    sgbm->setSpeckleWindowSize(100);
-    sgbm->setSpeckleRange(32);
-    sgbm->setDisp12MaxDiff(1);
-    if(alg==STEREO_HH)
-        sgbm->setMode(StereoSGBM::MODE_HH);
-    else if(alg==STEREO_SGBM)
-        sgbm->setMode(StereoSGBM::MODE_SGBM);
-    else if(alg==STEREO_3WAY)
-        sgbm->setMode(StereoSGBM::MODE_SGBM_3WAY);
+        sgbm->setP1(8 * cn * sgbmWinSize * sgbmWinSize);
+        sgbm->setP2(32 * cn * sgbmWinSize * sgbmWinSize);
 
-    Mat disp, disp8;
-    int64 t = getTickCount();
-    if( alg == STEREO_BM )
-        bm->compute(img1, img2, disp);
-    else if( alg == STEREO_SGBM || alg == STEREO_HH || alg == STEREO_3WAY )
-        sgbm->compute(img1, img2, disp);
-    t = getTickCount() - t;
-   // printf("Time elapsed: %fms\n", t*1000/getTickFrequency());
+        sgbm->setMinDisparity(0);
+        sgbm->setNumDisparities(numberOfDisparities);
 
-    //disp = dispp.colRange(numberOfDisparities, img1p.cols);
-    if( alg != STEREO_VAR )
-        disp.convertTo(disp8, CV_8U, 255/(numberOfDisparities*16.));
-    else
-        disp.convertTo(disp8, CV_8U);
+        sgbm->setUniquenessRatio(1);
+        sgbm->setSpeckleWindowSize(60);
+        sgbm->setSpeckleRange(32);
+        sgbm->setDisp12MaxDiff(1);
+
+        if (alg == STEREO_HH)
+            sgbm->setMode(StereoSGBM::MODE_HH);
+        else if (alg == STEREO_SGBM)
+            sgbm->setMode(StereoSGBM::MODE_SGBM);
+        else if (alg == STEREO_3WAY)
+            sgbm->setMode(StereoSGBM::MODE_SGBM_3WAY);
+
+        Mat disp, disp8;
+        int64 t = getTickCount();
+        if (alg == STEREO_BM)
+            bm->compute(img1, img2, disp);
+        else if (alg == STEREO_SGBM || alg == STEREO_HH || alg == STEREO_3WAY)
+            sgbm->compute(img1, img2, disp);
+        t = getTickCount() - t;
+        // printf("Time elapsed: %fms\n", t*1000/getTickFrequency());
+
+        // disp = dispp.colRange(numberOfDisparities, img1p.cols);
+        if (alg != STEREO_VAR)
+            disp.convertTo(disp8, CV_8U, 255 / (numberOfDisparities * 16.));
+        else
+        {
+            disp.convertTo(disp8, CV_8U);
+        }
+
         if (!no_display)
         {
             namedWindow("left", cv::WINDOW_AUTOSIZE);
@@ -307,8 +313,11 @@ int stereo_match()
             namedWindow("right", cv::WINDOW_AUTOSIZE);
             imshow("right", img2);
             namedWindow("disparity", cv::WINDOW_AUTOSIZE);
-            imshow("disparity", disp);
+            imshow("disparity", disp8);
         }
+        // Close window using esc key
+        if (cv::waitKey(1) == 27)
+            break;
     }
     if (!disparity_filename.empty())
         imwrite(disparity_filename, disp8);

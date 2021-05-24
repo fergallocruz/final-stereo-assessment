@@ -1,7 +1,7 @@
 {
   "files":{
-    "right":"scenes/right03.jpg",
-    "left":"scenes/left03.jpg",
+    "right":"images/Backgrounds/right0.jpg",
+    "left":"images/Backgrounds/left0.jpg",
     "intrinsic":"intrinsics.yml",
     "extrinsic":"extrinsics.yml",
     "disparity":"disparityMap.jpg",

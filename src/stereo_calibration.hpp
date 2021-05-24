@@ -59,6 +59,7 @@ static void StereoCalib(const vector<string>& imagelist, const Size& boardSize, 
     imagePoints[0].resize(nimages);
     imagePoints[1].resize(nimages);
     vector<string> goodImageList;
+    
 
     for (i = j = 0; i < nimages; i++)
     {

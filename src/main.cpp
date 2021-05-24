@@ -7,7 +7,7 @@ int main(int argc, char** argv)
     string imagelistfn;
     bool showRectified;
     cv::CommandLineParser parser(argc, argv,
-                                 "{w|5|}{h|7|}{s|0.5|}{nr||}{help||}{@input|"
+                                 "{w|6|}{h|11|}{s|1|}{nr||}{help||}{@input|"
                                  "stereo_calib.xml|}");
     if (parser.has("help"))
         return print_help();
