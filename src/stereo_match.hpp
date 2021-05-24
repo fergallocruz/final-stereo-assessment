@@ -307,11 +307,8 @@ int stereo_match()
             namedWindow("right", cv::WINDOW_AUTOSIZE);
             imshow("right", img2);
             namedWindow("disparity", cv::WINDOW_AUTOSIZE);
-            imshow("disparity", disp8);
+            imshow("disparity", disp);
         }
-        // Close window using esc key
-        if (cv::waitKey(1) == 27)
-            break;
     }
     if (!disparity_filename.empty())
         imwrite(disparity_filename, disp8);

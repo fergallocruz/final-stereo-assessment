@@ -7,7 +7,7 @@
     "disparity":"disparityMap.jpg",
     "point_cloud":"pointcloud.txt"
   },
-  "algorithm":"bm",
+  "algorithm":"sgbm",
   "max-disparity":64,
   "blocksize":5,
   "scale":1.0,
