@@ -1,0 +1,268 @@
+Package: libwebp
+Version: 1.1.0
+Port-Version: 3
+Depends: libwebp
+Architecture: x86-windows
+Multi-Arch: same
+Abi: 441353e7a62ae7dbd4ba6cec82f2a3d9a3cefa93
+Description: WebP codec: library to encode and decode images in WebP format
+Type: Port
+Default-Features: nearlossless, simd
+Status: install ok installed
+
+Package: libwebp
+Feature: nearlossless
+Architecture: x86-windows
+Multi-Arch: same
+Description: Enable near-lossless encoding
+Type: Port
+Status: install ok installed
+
+Package: libwebp
+Feature: simd
+Architecture: x86-windows
+Multi-Arch: same
+Description: Enable any SIMD optimization.
+Type: Port
+Status: install ok installed
+
+Package: libwebp
+Feature: unicode
+Architecture: x86-windows
+Multi-Arch: same
+Description: Build Unicode executables. (Adds definition UNICODE and _UNICODE)
+Type: Port
+Status: install ok installed
+
+Package: zlib
+Version: 1.2.11
+Port-Version: 10
+Architecture: x86-windows
+Multi-Arch: same
+Abi: 13235460ea0529828d5a84c7048a6a9ca877450b
+Description: A compression library
+Type: Port
+Status: install ok installed
+
+Package: liblzma
+Version: 5.2.5
+Port-Version: 2
+Architecture: x86-windows
+Multi-Arch: same
+Abi: d0a91dc9f24bc3eb35a199c6a842e405f15bd473
+Description: Compression library with an API similar to that of zlib.
+Type: Port
+Status: install ok installed
+
+Package: libjpeg-turbo
+Version: 2.0.6
+Architecture: x86-windows
+Multi-Arch: same
+Abi: 0dfc46b6e30b3967faab5b1d26c1f44a928033f5
+Description: libjpeg-turbo is a JPEG image codec that uses SIMD instructions (MMX, SSE2, NEON, AltiVec) to accelerate baseline JPEG compression and decompression on x86, x86-64, ARM, and PowerPC systems.
+Type: Port
+Status: install ok installed
+
+Package: tiff
+Version: 4.1.0
+Port-Version: 2
+Depends: libjpeg-turbo, liblzma, zlib
+Architecture: x86-windows
+Multi-Arch: same
+Abi: d062863a41f65407881a23a577a822718db51bc1
+Description: A library that supports the manipulation of TIFF image files
+Type: Port
+Status: install ok installed
+
+Package: quirc
+Version: 1.1
+Port-Version: 2
+Architecture: x86-windows
+Multi-Arch: same
+Abi: 3ff896d0128eeb4f4f8f0eedc966541e6e817ec9
+Description: quirc is one of the C library available for scanning QR Codes
+Type: Port
+Status: install ok installed
+
+Package: libpng
+Version: 1.6.37
+Port-Version: 14
+Depends: zlib
+Architecture: x86-windows
+Multi-Arch: same
+Abi: ecbb161ba9733c1fe56aec699dfcb538a9322539
+Description: libpng is a library implementing an interface for reading and writing PNG (Portable Network Graphics) format files.
+Type: Port
+Status: install ok installed
+
+Package: protobuf
+Version: 3.15.8
+Port-Version: 1
+Depends: protobuf
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 20cb612ef55109280ceb9a20885d72ddeacda09f
+Description: Protocol Buffers - Google's data interchange format
+Type: Port
+Status: install ok installed
+
+Package: protobuf
+Version: 3.15.8
+Port-Version: 1
+Depends: protobuf:x64-windows
+Architecture: x86-windows
+Multi-Arch: same
+Abi: 006d1ff39ebcaf44f1c09efb0a38a415401ccda4
+Description: Protocol Buffers - Google's data interchange format
+Type: Port
+Status: install ok installed
+
+Package: opencv4
+Version: 4.5.1
+Port-Version: 1
+Depends: zlib
+Architecture: x86-windows
+Multi-Arch: same
+Abi: 0e11686e91b47ffb3aada12086b9f1a51efaae4a
+Description: computer vision library
+Type: Port
+Default-Features: dnn, jpeg, png, quirc, tiff, webp
+Status: install ok installed
+
+Package: opencv4
+Feature: dnn
+Depends: protobuf
+Architecture: x86-windows
+Multi-Arch: same
+Description: Enable dnn module
+Type: Port
+Status: install ok installed
+
+Package: opencv4
+Feature: jpeg
+Depends: libjpeg-turbo
+Architecture: x86-windows
+Multi-Arch: same
+Description: JPEG support for opencv
+Type: Port
+Status: install ok installed
+
+Package: opencv4
+Feature: png
+Depends: libpng
+Architecture: x86-windows
+Multi-Arch: same
+Description: PNG support for opencv
+Type: Port
+Status: install ok installed
+
+Package: opencv4
+Feature: quirc
+Depends: quirc
+Architecture: x86-windows
+Multi-Arch: same
+Description: Enable QR code module
+Type: Port
+Status: install ok installed
+
+Package: opencv4
+Feature: tiff
+Depends: tiff
+Architecture: x86-windows
+Multi-Arch: same
+Description: TIFF support for opencv
+Type: Port
+Status: install ok installed
+
+Package: opencv4
+Feature: webp
+Depends: libwebp
+Architecture: x86-windows
+Multi-Arch: same
+Description: WebP support for opencv
+Type: Port
+Status: install ok installed
+
+Package: opencv
+Version: 4.5.1
+Depends: opencv4
+Architecture: x86-windows
+Multi-Arch: same
+Abi: 0a2b56b74f98ff1e8bae5a5bb706e3044a4bacaa
+Description: Computer vision library
+Type: Port
+Default-Features: dnn, jpeg, png, quirc, tiff, webp
+Status: install ok installed
+
+Package: opencv
+Feature: dnn
+Depends: opencv4
+Architecture: x86-windows
+Multi-Arch: same
+Description: Enable dnn module
+Type: Port
+Status: install ok installed
+
+Package: opencv
+Feature: jpeg
+Depends: opencv4
+Architecture: x86-windows
+Multi-Arch: same
+Description: JPEG support for opencv
+Type: Port
+Status: install ok installed
+
+Package: opencv
+Feature: png
+Depends: opencv4
+Architecture: x86-windows
+Multi-Arch: same
+Description: PNG support for opencv
+Type: Port
+Status: install ok installed
+
+Package: opencv
+Feature: quirc
+Depends: opencv4
+Architecture: x86-windows
+Multi-Arch: same
+Description: Enable QR code module
+Type: Port
+Status: install ok installed
+
+Package: opencv
+Feature: tiff
+Depends: opencv4
+Architecture: x86-windows
+Multi-Arch: same
+Description: TIFF support for opencv
+Type: Port
+Status: install ok installed
+
+Package: opencv
+Feature: webp
+Depends: opencv4
+Architecture: x86-windows
+Multi-Arch: same
+Description: WebP support for opencv
+Type: Port
+Status: install ok installed
+
+Package: jsoncpp
+Version: 1.9.4
+Architecture: x86-windows
+Multi-Arch: same
+Abi: 6ee5d5ec868ed85f311dfbd087a2c4ea9cc73ea7
+Description: jsoncpp is an implementation of a JSON reader and writer in C++. JSON (JavaScript Object Notation) is a lightweight data-interchange format that it is easy to parse and redeable for human.
+Type: Port
+Status: install ok installed
+
+Package: jsmn
+Version: 2019-04-27
+Architecture: x86-windows
+Multi-Arch: same
+Abi: 75bee57b870ce75811e711811be52b9f4ca3e990
+Description: A minimalistic JSON parser in C.
+Type: Port
+Status: purge ok not-installed
+

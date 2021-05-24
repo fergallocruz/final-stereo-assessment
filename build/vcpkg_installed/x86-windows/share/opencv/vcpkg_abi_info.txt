@@ -1,0 +1,10 @@
+cmake 3.20.2
+features core;dnn;jpeg;png;quirc;tiff;webp
+opencv4 0e11686e91b47ffb3aada12086b9f1a51efaae4a
+portfile.cmake 50a40d59f0012d88dcc1b3eb9cff496885c00e9e
+ports.cmake bd8d6584852d3c42c455b6794fc31eb6a4f0914a
+post_build_checks 2
+powershell 7.1.3
+triplet x86-windows
+triplet_abi 4c64db251cbf53c76a606595b52416ec991ab5bb-a1c0eabb0c5177b6a8fb97a58ae398880c47b352-7facdde4cc53026ba0a23afddbaa5dc7a0e691e3
+vcpkg.json 1290f4ba69441eb0dd4459b951362d7ab9117a2c

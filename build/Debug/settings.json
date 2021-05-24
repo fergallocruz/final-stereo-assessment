@@ -1,0 +1,16 @@
+{
+  "files":{
+    "right":"scenes/right03.jpg",
+    "left":"scenes/left03.jpg",
+    "intrinsic":"intrinsics.yml",
+    "extrinsic":"extrinsics.yml",
+    "disparity":"disparityMap.jpg",
+    "point_cloud":"pointcloud.txt"
+  },
+  "algorithm":"bm",
+  "max-disparity":64,
+  "blocksize":5,
+  "scale":1.0,
+  "no-display":false,
+  "help":false
+}

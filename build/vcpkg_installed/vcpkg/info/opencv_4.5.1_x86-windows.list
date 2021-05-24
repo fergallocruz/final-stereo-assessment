@@ -1,0 +1,4 @@
+x86-windows/
+x86-windows/share/
+x86-windows/share/opencv/
+x86-windows/share/opencv/vcpkg_abi_info.txt

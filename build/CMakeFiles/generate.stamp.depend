@@ -1,0 +1,38 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.20/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.20/Modules/Platform/WindowsPaths.cmake
+C:/Users/mafer/final-assessment/CMakeLists.txt
+C:/Users/mafer/final-assessment/build/CMakeFiles/3.20.2/CMakeCCompiler.cmake
+C:/Users/mafer/final-assessment/build/CMakeFiles/3.20.2/CMakeCXXCompiler.cmake
+C:/Users/mafer/final-assessment/build/CMakeFiles/3.20.2/CMakeRCCompiler.cmake
+C:/Users/mafer/final-assessment/build/CMakeFiles/3.20.2/CMakeSystem.cmake
+C:/Users/mafer/final-assessment/build/vcpkg_installed/.cmakestamp
+C:/Users/mafer/final-assessment/build/vcpkg_installed/x86-windows/share/jsoncpp/jsoncppConfig-debug.cmake
+C:/Users/mafer/final-assessment/build/vcpkg_installed/x86-windows/share/jsoncpp/jsoncppConfig-release.cmake
+C:/Users/mafer/final-assessment/build/vcpkg_installed/x86-windows/share/jsoncpp/jsoncppConfig.cmake
+C:/Users/mafer/final-assessment/build/vcpkg_installed/x86-windows/share/jsoncpp/jsoncppConfigVersion.cmake
+C:/Users/mafer/final-assessment/build/vcpkg_installed/x86-windows/share/opencv/OpenCVConfig-version.cmake
+C:/Users/mafer/final-assessment/build/vcpkg_installed/x86-windows/share/opencv/OpenCVConfig.cmake
+C:/Users/mafer/final-assessment/build/vcpkg_installed/x86-windows/share/opencv/OpenCVModules-debug.cmake
+C:/Users/mafer/final-assessment/build/vcpkg_installed/x86-windows/share/opencv/OpenCVModules-release.cmake
+C:/Users/mafer/final-assessment/build/vcpkg_installed/x86-windows/share/opencv/OpenCVModules.cmake
+C:/Users/mafer/final-assessment/vcpkg.json
+C:/Users/mafer/vcpkg/scripts/buildsystems/vcpkg.cmake

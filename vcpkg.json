@@ -1,0 +1,5 @@
+{
+  "name": "final-assessment",
+  "version-string": "1.0",
+  "dependencies": ["opencv", "jsoncpp"]
+}
