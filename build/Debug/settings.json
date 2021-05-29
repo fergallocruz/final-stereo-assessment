@@ -1,13 +1,13 @@
 {
   "files":{
-    "right":"images/Backgrounds/right0.jpg",
-    "left":"images/Backgrounds/left0.jpg",
+    "right":"scenes/right01.jpg",
+    "left":"scenes/left01.jpg",
     "intrinsic":"intrinsics.yml",
     "extrinsic":"extrinsics.yml",
     "disparity":"disparityMap.jpg",
     "point_cloud":"pointcloud.txt"
   },
-  "algorithm":"sgbm",
+  "algorithm":"bm",
   "max-disparity":64,
   "blocksize":5,
   "scale":1.0,
